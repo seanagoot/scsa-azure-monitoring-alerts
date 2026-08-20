@@ -111,13 +111,14 @@ The events were successfully ingested into Log Analytics and verified using KQL.
 Example query:
 
 ```kusto
+
 Syslog
 | where Computer == "vm-scsa-app01"
 | where SyslogMessage contains "SCSA Project 4 validation"
 | project TimeGenerated, Computer, Facility, SeverityLevel, SyslogMessage
 | order by TimeGenerated desc
 
-```text
+```
 
 The successful query confirmed the full telemetry path:
 
