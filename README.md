@@ -117,6 +117,8 @@ Syslog
 | project TimeGenerated, Computer, Facility, SeverityLevel, SyslogMessage
 | order by TimeGenerated desc
 
+```text
+
 The successful query confirmed the full telemetry path:
 
 `Linux Syslog → Azure Monitor Agent → Data Collection Rule → Log Analytics Workspace`
